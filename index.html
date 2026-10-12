@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Food Website – order fresh Pakistani food online. Biryani, karahi, BBQ, desserts and drinks delivered hot.">
+<meta name="theme-color" content="#c2410c">
+<title>Food Website – Fresh Food Delivered Hot</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f59e0b'/%3E%3Cstop offset='1' stop-color='%23c2410c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='14' fill='url(%23g)'/%3E%3Cpath d='M10 24h28a14 12 0 0 1-28 0z' fill='%23fff'/%3E%3Cpath d='M18 18c-2-2.5 2-4 0-6.5M24 18c-2-2.5 2-4 0-6.5M30 18c-2-2.5 2-4 0-6.5M20 40h8' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.classList.add("js");
+  try{var a=JSON.parse(localStorage.getItem("fw_a11y")||"{}");
+  if(a.size)document.documentElement.classList.add("text-"+a.size);
+  if(a.contrast)document.documentElement.classList.add("high-contrast");}catch(e){}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ================= HEADER (same on every page) ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-in">
+    <a href="#home" class="logo" aria-label="Food Website – go to home page">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="logoGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#c2410c"/></linearGradient></defs>
+        <rect class="logo-bg" width="48" height="48" rx="14" fill="url(#logoGrad1)"/>
+        <g class="steam" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
+          <path class="s1" d="M18 18c-2-2.5 2-4 0-6.5"/><path class="s2" d="M24 18c-2-2.5 2-4 0-6.5"/><path class="s3" d="M30 18c-2-2.5 2-4 0-6.5"/>
+        </g>
+        <path d="M10 24h28a14 12 0 0 1-28 0z" fill="#fff"/>
+        <path d="M20 40h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-words">
+        <span class="logo-name">Food<b>Website</b></span>
+        <span class="logo-tag">Fresh · Fast · Tasty</span>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open main menu">
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span></label>
+
+    <nav class="nav" aria-label="Main">
+      <a href="#home"><i class="bi bi-house-door" aria-hidden="true"></i> Home</a>
+      <a href="#menu"><i class="bi bi-grid" aria-hidden="true"></i> Menu</a>
+      <a href="#track"><i class="bi bi-truck" aria-hidden="true"></i> Track Order</a>
+      <a href="#account"><i class="bi bi-person-circle" aria-hidden="true"></i> Account</a>
+      <a href="#help"><i class="bi bi-question-circle" aria-hidden="true"></i> Help</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#search" class="icon-btn" aria-label="Search dishes"><i class="bi bi-search" aria-hidden="true"></i></a>
+      <a href="#cart" class="icon-btn cart-btn" id="cartLink" aria-label="Cart, 0 items">
+        <i class="bi bi-cart3" aria-hidden="true"></i>
+        <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ================= TASK 1: HOME ================= -->
+<section id="home" class="page" aria-labelledby="homeH">
+  <div class="hero">
+    <span class="blob b1" aria-hidden="true"></span>
+    <span class="blob b2" aria-hidden="true"></span>
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <p class="eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> Pakistan's favourite home-style kitchen</p>
+        <h1 id="homeH">Fresh, hot &amp; tasty food <span class="hl">delivered in 30 minutes</span></h1>
+        <p class="hero-sub">Biryani, karahi, BBQ and desserts cooked fresh every day. Order in 3 clicks and track your food live.</p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary btn-lg"><i class="bi bi-bag-heart" aria-hidden="true"></i> Order Now</a>
+        </div>
+        <ul class="hero-stats" aria-label="Quick facts">
+          <li><strong>4.9 <i class="bi bi-star-fill" aria-hidden="true"></i></strong><span>Customer rating</span></li>
+          <li><strong>30 min</strong><span>Average delivery</span></li>
+          <li><strong>10k+</strong><span>Happy orders</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="hero-img img-wrap" data-emoji="🍛">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=75"
+               alt="Two plates of chicken biryani on a dark table" onload="this.parentNode.classList.add('loaded')" onerror="this.parentNode.classList.add('img-failed');this.remove()">
+        </div>
+        <div class="float-card fc1"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i><span><strong>Fast delivery</strong>30 minutes</span></div>
+        <div class="float-card fc2"><i class="bi bi-star-fill" aria-hidden="true"></i><span><strong>4.9 rating</strong>2,300 reviews</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <form class="home-search reveal" id="homeSearch" role="search">
+      <label for="homeQ" class="sr-only">Search dishes</label>
+      <i class="bi bi-search search-ico" aria-hidden="true"></i>
+      <input id="homeQ" type="search" placeholder="What are you craving? Try 'biryani' or 'lassi'" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+
+    <ul class="perks reveal" aria-label="Why order from us">
+      <li><span class="perk-ico"><i class="bi bi-clock-history" aria-hidden="true"></i></span><div><strong>30-min delivery</strong><small>Hot and on time</small></div></li>
+      <li><span class="perk-ico"><i class="bi bi-bicycle" aria-hidden="true"></i></span><div><strong>Free delivery</strong><small>On orders over Rs 2,000</small></div></li>
+      <li><span class="perk-ico"><i class="bi bi-shield-check" aria-hidden="true"></i></span><div><strong>Fresh &amp; hygienic</strong><small>Cooked fresh daily</small></div></li>
+    </ul>
+
+    <div class="section-head reveal">
+      <div><p class="kicker">Most loved</p><h2>Popular right now</h2></div>
+      <a href="#menu" class="text-link">See full menu <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="cards" id="featured"></div>
+
+    <div class="how reveal">
+      <p class="kicker center">Simple &amp; quick</p>
+      <h2 class="center-text">How it works</h2>
+      <ol class="how-steps">
+        <li><span class="how-ico"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i></span><h3>Choose</h3><p>Browse the menu and pick your favourite dishes.</p></li>
+        <li><span class="how-ico"><i class="bi bi-cart-check" aria-hidden="true"></i></span><h3>Order</h3><p>Check out in seconds – cash or card.</p></li>
+        <li><span class="how-ico"><i class="bi bi-emoji-smile" aria-hidden="true"></i></span><h3>Enjoy</h3><p>Track your rider live and enjoy hot food.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 2: MENU ================= -->
+<section id="menu" class="page" aria-labelledby="menuH">
+  <div class="page-banner">
+    <div class="wrap">
+      <p class="kicker light">Fresh every day</p>
+      <h1 id="menuH">Our Menu</h1>
+      <p class="lead light">Pick a category, filter by what you like, and add dishes to your cart.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tabs" role="group" aria-label="Food categories" id="catTabs">
+      <button type="button" data-cat="All" aria-pressed="true"><i class="bi bi-grid" aria-hidden="true"></i> All</button>
+      <button type="button" data-cat="Starters" aria-pressed="false"><i class="bi bi-egg-fried" aria-hidden="true"></i> Starters</button>
+      <button type="button" data-cat="Mains" aria-pressed="false"><i class="bi bi-fire" aria-hidden="true"></i> Mains</button>
+      <button type="button" data-cat="Desserts" aria-pressed="false"><i class="bi bi-gift" aria-hidden="true"></i> Desserts</button>
+      <button type="button" data-cat="Drinks" aria-pressed="false"><i class="bi bi-cup" aria-hidden="true"></i> Drinks</button>
+    </div>
+
+    <div class="toolbar panel">
+      <fieldset class="filters">
+        <legend><i class="bi bi-funnel" aria-hidden="true"></i> Filter</legend>
+        <label class="chip"><input type="checkbox" id="fVeg"> <i class="bi bi-flower1" aria-hidden="true"></i> Vegetarian</label>
+        <label class="chip"><input type="checkbox" id="fSpicy"> <i class="bi bi-fire" aria-hidden="true"></i> Spicy</label>
+        <label class="chip"><input type="checkbox" id="fNuts"> Nut-free</label>
+        <label class="chip"><input type="checkbox" id="fDairy"> Dairy-free</label>
+        <label class="select-label">Price
+          <select id="fPrice">
+            <option value="99999">Any price</option>
+            <option value="300">Under Rs 300</option>
+            <option value="600">Under Rs 600</option>
+            <option value="1000">Under Rs 1,000</option>
+          </select>
+        </label>
+      </fieldset>
+      <div class="toolbar-right">
+        <label class="select-label"><i class="bi bi-sort-down" aria-hidden="true"></i> Sort by
+          <select id="sortBy">
+            <option value="pop">Most popular</option>
+            <option value="rating">Highest rated</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+        <button type="button" class="btn btn-ghost btn-sm" data-reset><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Reset filters</button>
+      </div>
+    </div>
+
+    <p class="count" id="menuCount" aria-live="polite"></p>
+    <div class="cards" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ================= TASK 3: SEARCH ================= -->
+<section id="search" class="page" aria-labelledby="searchH">
+  <div class="page-banner">
+    <div class="wrap">
+      <p class="kicker light">Find it fast</p>
+      <h1 id="searchH">Search dishes</h1>
+      <p class="lead light">Know what you want? Type it below – small spelling mistakes are fine.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <form role="search" id="searchForm" class="search-box">
+      <label for="q" class="sr-only">Search dishes</label>
+      <i class="bi bi-search search-ico" aria-hidden="true"></i>
+      <input id="q" type="search" placeholder="Try 'biryani', 'spicy' or 'mango'" autocomplete="off"
+             role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggest">
+      <button type="button" id="clearSearch" class="clear-btn" aria-label="Clear search" hidden><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      <ul id="suggest" class="suggest" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+
+    <p id="searchStatus" class="count" role="status"></p>
+
+    <div id="searchIdle">
+      <p class="muted"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> Popular searches:</p>
+      <div class="chips">
+        <button type="button" class="chip" data-q="biryani">Biryani</button>
+        <button type="button" class="chip" data-q="karahi">Karahi</button>
+        <button type="button" class="chip" data-q="vegetarian">Vegetarian</button>
+        <button type="button" class="chip" data-q="lassi">Lassi</button>
+        <button type="button" class="chip" data-q="spicy">Spicy</button>
+      </div>
+    </div>
+
+    <div class="cards" id="searchResults"></div>
+
+    <div id="noResults" class="empty" hidden>
+      <span class="empty-icon"><i class="bi bi-emoji-frown" aria-hidden="true"></i></span>
+      <h2>No dishes found for “<span id="nrQuery"></span>”</h2>
+      <p>Check the spelling, try a shorter word, or try one of these:</p>
+      <div class="chips center">
+        <button type="button" class="chip" data-q="chicken">Chicken</button>
+        <button type="button" class="chip" data-q="dessert">Desserts</button>
+        <button type="button" class="chip" data-q="drinks">Drinks</button>
+      </div>
+      <a href="#menu" class="btn btn-primary"><i class="bi bi-grid" aria-hidden="true"></i> Browse full menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 4: CART ================= -->
+<section id="cart" class="page" aria-labelledby="cartH">
+  <div class="wrap">
+    <ol class="steps" aria-label="Order progress">
+      <li class="current" aria-current="step"><span>1</span>Cart</li>
+      <li><span>2</span>Details</li>
+      <li><span>3</span>Payment</li>
+      <li><span>4</span>Confirmation</li>
+    </ol>
+    <h1 id="cartH"><i class="bi bi-cart3" aria-hidden="true"></i> Your cart</h1>
+
+    <div id="cartEmpty" class="empty">
+      <span class="empty-icon"><i class="bi bi-basket" aria-hidden="true"></i></span>
+      <h2>Your cart is empty</h2>
+      <p>Add some delicious dishes to get started.</p>
+      <a href="#menu" class="btn btn-primary"><i class="bi bi-grid" aria-hidden="true"></i> Browse the menu</a>
+    </div>
+
+    <div class="two-col" id="cartWrap" hidden>
+      <ul class="cart-list" id="cartList" aria-label="Items in your cart"></ul>
+      <aside class="panel summary" aria-labelledby="sumH1">
+        <h2 id="sumH1"><i class="bi bi-receipt" aria-hidden="true"></i> Order summary</h2>
+        <dl class="sum">
+          <div><dt>Subtotal</dt><dd data-sum="sub">Rs 0</dd></div>
+          <div><dt>Delivery</dt><dd data-sum="delivery">Rs 0</dd></div>
+          <div><dt>Tax (5%)</dt><dd data-sum="tax">Rs 0</dd></div>
+          <div class="sum-total"><dt>Total</dt><dd data-sum="total">Rs 0</dd></div>
+        </dl>
+        <div class="free-bar" aria-hidden="true"><span id="freeBar"></span></div>
+        <p class="free-hint" data-sum="hint"></p>
+        <a href="#checkout" class="btn btn-primary btn-block">Proceed to checkout <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <a href="#menu" class="btn btn-ghost btn-block"><i class="bi bi-plus-lg" aria-hidden="true"></i> Add more items</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 4: CHECKOUT ================= -->
+<section id="checkout" class="page" aria-labelledby="coH">
+  <div class="wrap">
+    <ol class="steps" id="coSteps" aria-label="Order progress">
+      <li class="done"><span>1</span>Cart</li>
+      <li class="current" aria-current="step"><span>2</span>Details</li>
+      <li><span>3</span>Payment</li>
+      <li><span>4</span>Confirmation</li>
+    </ol>
+    <h1 id="coH">Checkout</h1>
+
+    <div class="two-col">
+      <form id="checkoutForm" novalidate>
+        <fieldset id="stepDetails" class="panel">
+          <legend><h2><i class="bi bi-geo-alt" aria-hidden="true"></i> Delivery details</h2></legend>
+          <p class="muted small">Fields marked <span class="req">*</span> are required.</p>
+
+          <div class="field" id="savedAddrWrap" hidden>
+            <label for="savedAddr">Use a saved address</label>
+            <select id="savedAddr"></select>
+          </div>
+
+          <div class="field">
+            <label for="coName">Full name <span class="req">*</span></label>
+            <input id="coName" data-rule="name" autocomplete="name" aria-describedby="coNameErr">
+            <p class="err" id="coNameErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="coPhone">Mobile number <span class="req">*</span>
+              <span class="tip" tabindex="0" data-tip="Our rider will call this number if they can't find your address."><i class="bi bi-info-circle-fill" aria-hidden="true"></i><span class="sr-only">Help: our rider will call this number if they can't find your address.</span></span>
+            </label>
+            <input id="coPhone" type="tel" inputmode="tel" placeholder="0312-3456789" data-rule="phone" autocomplete="tel" aria-describedby="coPhoneHint coPhoneErr">
+            <p class="hint" id="coPhoneHint">Format: 03XX-XXXXXXX</p>
+            <p class="err" id="coPhoneErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="coArea">Area <span class="req">*</span></label>
+            <select id="coArea" data-rule="area" aria-describedby="coAreaErr">
+              <option value="">Choose your area</option>
+              <option>Gulberg</option><option>DHA</option><option>Model Town</option>
+              <option>Johar Town</option><option>Bahria Town</option>
+            </select>
+            <p class="err" id="coAreaErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="coAddress">Full address <span class="req">*</span></label>
+            <textarea id="coAddress" rows="3" data-rule="address" placeholder="House 12, Street 4, near Green Mosque" autocomplete="street-address" aria-describedby="coAddressErr"></textarea>
+            <p class="err" id="coAddressErr" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="coNote">Delivery instructions <span class="muted">(optional)</span></label>
+            <input id="coNote" placeholder="e.g. Ring the bell twice">
+          </div>
+
+          <div class="form-actions">
+            <a href="#cart" class="btn btn-ghost"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to cart</a>
+            <button type="button" class="btn btn-primary" id="toPayment">Continue to payment <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </fieldset>
+
+        <fieldset id="stepPayment" class="panel" hidden>
+          <legend><h2><i class="bi bi-wallet2" aria-hidden="true"></i> Payment</h2></legend>
+          <div class="radio-cards">
+            <label class="radio-card"><input type="radio" name="pay" value="cod" checked>
+              <i class="bi bi-cash-coin rc-ico" aria-hidden="true"></i>
+              <span><strong>Cash on delivery</strong><small>Pay the rider when your food arrives</small></span></label>
+            <label class="radio-card"><input type="radio" name="pay" value="card">
+              <i class="bi bi-credit-card-2-front rc-ico" aria-hidden="true"></i>
+              <span><strong>Debit / credit card</strong><small>Visa or Mastercard</small></span></label>
+          </div>
+
+          <div id="cardFields" hidden>
+            <div class="field">
+              <label for="ccNum">Card number <span class="req">*</span></label>
+              <input id="ccNum" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19" data-rule="card" autocomplete="cc-number" aria-describedby="ccNumErr">
+              <p class="err" id="ccNumErr" aria-live="polite"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="ccExp">Expiry <span class="req">*</span></label>
+                <input id="ccExp" placeholder="MM/YY" maxlength="5" data-rule="expiry" autocomplete="cc-exp" aria-describedby="ccExpErr">
+                <p class="err" id="ccExpErr" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="ccCvv">CVV <span class="req">*</span>
+                  <span class="tip" tabindex="0" data-tip="The 3-digit code printed on the back of your card."><i class="bi bi-info-circle-fill" aria-hidden="true"></i><span class="sr-only">Help: the 3-digit code printed on the back of your card.</span></span>
+                </label>
+                <input id="ccCvv" inputmode="numeric" maxlength="3" placeholder="123" data-rule="cvv" autocomplete="cc-csc" aria-describedby="ccCvvErr">
+                <p class="err" id="ccCvvErr" aria-live="polite"></p>
+              </div>
+            </div>
+            <p class="secure-note"><i class="bi bi-lock-fill" aria-hidden="true"></i> Payments are encrypted and secure.</p>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" id="backDetails"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to details</button>
+            <button type="submit" class="btn btn-primary">Review order <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="panel summary" aria-labelledby="sumH2">
+        <h2 id="sumH2"><i class="bi bi-receipt" aria-hidden="true"></i> Order summary</h2>
+        <ul class="mini-items" id="coItems"></ul>
+        <dl class="sum">
+          <div><dt>Subtotal</dt><dd data-sum="sub">Rs 0</dd></div>
+          <div><dt>Delivery</dt><dd data-sum="delivery">Rs 0</dd></div>
+          <div><dt>Tax (5%)</dt><dd data-sum="tax">Rs 0</dd></div>
+          <div class="sum-total"><dt>Total</dt><dd data-sum="total">Rs 0</dd></div>
+        </dl>
+        <a href="#cart" class="text-link"><i class="bi bi-pencil-square" aria-hidden="true"></i> Edit cart</a>
+        <p class="help-note"><i class="bi bi-headset" aria-hidden="true"></i> Need help? <a href="#help">Read the FAQ</a> or call <a href="tel:03001234567">0300-1234567</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 4: CONFIRMATION ================= -->
+<section id="confirm" class="page" aria-labelledby="cfH">
+  <div class="wrap narrow">
+    <ol class="steps" aria-label="Order progress">
+      <li class="done"><span>1</span>Cart</li>
+      <li class="done"><span>2</span>Details</li>
+      <li class="done"><span>3</span>Payment</li>
+      <li class="current" aria-current="step"><span>4</span>Confirmation</li>
+    </ol>
+    <div class="panel confirm-box">
+      <div class="big-check" aria-hidden="true"><i class="bi bi-check-lg"></i></div>
+      <h1 id="cfH">Thank you! Your order is confirmed.</h1>
+      <div class="confirm-meta">
+        <p><i class="bi bi-hash" aria-hidden="true"></i> Order number<strong id="cfNo">–</strong></p>
+        <p><i class="bi bi-clock" aria-hidden="true"></i> Estimated delivery<strong id="cfEta">–</strong></p>
+      </div>
+      <ul class="mini-items" id="cfItems"></ul>
+      <p class="sum-line">Total: <strong id="cfTotal">–</strong></p>
+      <div class="form-actions center">
+        <a href="#track" class="btn btn-primary"><i class="bi bi-geo-alt" aria-hidden="true"></i> Track my order</a>
+        <a href="#menu" class="btn btn-ghost">Back to menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 5: ACCOUNT ================= -->
+<section id="account" class="page" aria-labelledby="accH">
+  <div class="wrap">
+    <h1 id="accH"><i class="bi bi-person-circle" aria-hidden="true"></i> My account</h1>
+
+    <div id="authArea">
+      <p class="lead">Log in to save addresses and favourites, and reorder in one click.</p>
+      <div class="two-col even">
+        <form class="panel" id="loginForm" novalidate>
+          <h2><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Log in</h2>
+          <div class="field">
+            <label for="liEmail">Email</label>
+            <div class="input-ico"><i class="bi bi-envelope" aria-hidden="true"></i>
+            <input id="liEmail" type="email" data-rule="email" autocomplete="email" placeholder="name@example.com" aria-describedby="liEmailErr"></div>
+            <p class="err" id="liEmailErr" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="liPass">Password</label>
+            <div class="pw input-ico"><i class="bi bi-key" aria-hidden="true"></i>
+              <input id="liPass" type="password" data-rule="passwordLogin" autocomplete="current-password" aria-describedby="liPassErr">
+              <button type="button" class="pw-toggle" aria-controls="liPass" aria-pressed="false"><i class="bi bi-eye" aria-hidden="true"></i> <span>Show</span></button>
+            </div>
+            <p class="err" id="liPassErr" aria-live="polite"></p>
+          </div>
+          <p class="err form-err" id="loginErr" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          <button type="button" class="text-link as-btn" id="forgotBtn">Forgot password?</button>
+        </form>
+
+        <form class="panel" id="regForm" novalidate>
+          <h2><i class="bi bi-person-plus" aria-hidden="true"></i> Create an account</h2>
+          <p class="muted small">Just 3 fields – takes about 20 seconds.</p>
+          <div class="field">
+            <label for="rgName">Name</label>
+            <div class="input-ico"><i class="bi bi-person" aria-hidden="true"></i>
+            <input id="rgName" data-rule="name" autocomplete="name" aria-describedby="rgNameErr"></div>
+            <p class="err" id="rgNameErr" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="rgEmail">Email</label>
+            <div class="input-ico"><i class="bi bi-envelope" aria-hidden="true"></i>
+            <input id="rgEmail" type="email" data-rule="email" autocomplete="email" placeholder="name@example.com" aria-describedby="rgEmailErr"></div>
+            <p class="err" id="rgEmailErr" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="rgPass">Password</label>
+            <div class="pw input-ico"><i class="bi bi-key" aria-hidden="true"></i>
+              <input id="rgPass" type="password" data-rule="password" autocomplete="new-password" aria-describedby="pwRules rgPassErr">
+              <button type="button" class="pw-toggle" aria-controls="rgPass" aria-pressed="false"><i class="bi bi-eye" aria-hidden="true"></i> <span>Show</span></button>
+            </div>
+            <ul class="pw-rules" id="pwRules">
+              <li data-r="len">At least 8 characters</li>
+              <li data-r="let">At least one letter</li>
+              <li data-r="num">At least one number</li>
+            </ul>
+            <p class="err" id="rgPassErr" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="profileArea" hidden>
+      <div class="panel profile-head">
+        <div class="avatar" id="pfAvatar" aria-hidden="true">A</div>
+        <div class="grow"><h2 id="pfName"></h2><p class="muted" id="pfEmail"></p></div>
+        <button type="button" class="btn btn-ghost" id="logoutBtn"><i class="bi bi-box-arrow-right" aria-hidden="true"></i> Log out</button>
+      </div>
+
+      <div class="two-col even">
+        <div class="panel">
+          <h2><i class="bi bi-geo-alt" aria-hidden="true"></i> Saved addresses</h2>
+          <ul class="addr-list" id="addrList"></ul>
+          <form id="addrForm" class="addr-form" novalidate>
+            <div class="field">
+              <label for="adLabel">Label</label>
+              <select id="adLabel"><option>Home</option><option>Work</option><option>Other</option></select>
+            </div>
+            <div class="field grow">
+              <label for="adText">New address</label>
+              <input id="adText" data-rule="address" placeholder="House 12, Street 4, Gulberg" aria-describedby="adTextErr">
+              <p class="err" id="adTextErr" aria-live="polite"></p>
+            </div>
+            <button type="submit" class="btn btn-ghost"><i class="bi bi-plus-lg" aria-hidden="true"></i> Save</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h2><i class="bi bi-clock-history" aria-hidden="true"></i> Order history</h2>
+          <ul class="history" id="historyList"></ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2><i class="bi bi-heart-fill text-primary" aria-hidden="true"></i> My favourites</h2>
+        <div class="cards" id="favGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 6: TRACKING ================= -->
+<section id="track" class="page" aria-labelledby="tkH">
+  <div class="wrap">
+    <h1 id="tkH"><i class="bi bi-truck" aria-hidden="true"></i> Track your order</h1>
+
+    <div id="trackEmpty" class="empty">
+      <span class="empty-icon"><i class="bi bi-bicycle" aria-hidden="true"></i></span>
+      <h2>No active order</h2>
+      <p>Once you place an order, you can follow it here step by step.</p>
+      <div class="form-actions center">
+        <a href="#menu" class="btn btn-primary">Order now</a>
+        <button type="button" class="btn btn-ghost" id="demoOrder"><i class="bi bi-play-circle" aria-hidden="true"></i> See a demo order</button>
+      </div>
+    </div>
+
+    <div id="trackWrap" hidden>
+      <div class="panel">
+        <div class="track-head">
+          <div><p class="muted small">Order number</p><h2 id="tkNo">–</h2></div>
+          <div class="eta"><p class="muted small">Estimated arrival</p><p class="eta-time" id="tkEta">–</p></div>
+        </div>
+        <ol class="status-bar" id="statusBar" aria-label="Order status">
+          <li><span class="dot"><i class="bi bi-receipt" aria-hidden="true"></i></span>Received</li>
+          <li><span class="dot"><i class="bi bi-fire" aria-hidden="true"></i></span>Preparing</li>
+          <li><span class="dot"><i class="bi bi-bicycle" aria-hidden="true"></i></span>On the way</li>
+          <li><span class="dot"><i class="bi bi-house-door" aria-hidden="true"></i></span>Delivered</li>
+        </ol>
+        <p id="tkMsg" class="status-msg" role="status"></p>
+      </div>
+
+      <div class="two-col even">
+        <div class="panel">
+          <h2><i class="bi bi-bag" aria-hidden="true"></i> Order details</h2>
+          <ul class="mini-items" id="tkItems"></ul>
+          <p class="sum-line">Total: <strong id="tkTotal"></strong></p>
+          <p class="muted small" id="tkAddr"></p>
+        </div>
+        <div>
+          <div class="panel">
+            <h2><i class="bi bi-headset" aria-hidden="true"></i> Need help with this order?</h2>
+            <div class="form-actions">
+              <a href="tel:03001234567" class="btn btn-ghost"><i class="bi bi-telephone" aria-hidden="true"></i> Call restaurant</a>
+              <button type="button" class="btn btn-danger" id="cancelBtn"><i class="bi bi-x-circle" aria-hidden="true"></i> Cancel order</button>
+            </div>
+            <p class="hint" id="cancelHint"></p>
+          </div>
+          <div class="panel">
+            <h2><i class="bi bi-bell" aria-hidden="true"></i> Notifications</h2>
+            <ul class="notes" id="tkNotes"></ul>
+          </div>
+        </div>
+      </div>
+
+      <form class="panel rate" id="rateForm" hidden novalidate>
+        <h2>How was your food?</h2>
+        <fieldset class="stars">
+          <legend class="sr-only">Your rating</legend>
+          <input type="radio" id="tr5" name="tr" value="5"><label for="tr5"><span class="sr-only">5 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+          <input type="radio" id="tr4" name="tr" value="4"><label for="tr4"><span class="sr-only">4 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+          <input type="radio" id="tr3" name="tr" value="3"><label for="tr3"><span class="sr-only">3 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+          <input type="radio" id="tr2" name="tr" value="2"><label for="tr2"><span class="sr-only">2 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+          <input type="radio" id="tr1" name="tr" value="1"><label for="tr1"><span class="sr-only">1 star</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+        </fieldset>
+        <div class="field">
+          <label for="rateText">Tell us more <span class="muted">(optional)</span></label>
+          <textarea id="rateText" rows="2" placeholder="What did you like? What can we improve?"></textarea>
+        </div>
+        <p class="err" id="rateErr" aria-live="polite"></p>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-send" aria-hidden="true"></i> Submit rating</button>
+      </form>
+      <div class="panel success" id="rateDone" hidden><i class="bi bi-patch-check-fill" aria-hidden="true"></i> <strong>Thanks for rating!</strong> Your feedback helps our kitchen improve.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASK 7: HELP ================= -->
+<section id="help" class="page" aria-labelledby="helpH">
+  <div class="page-banner">
+    <div class="wrap">
+      <p class="kicker light">We're here for you</p>
+      <h1 id="helpH">Help &amp; contact</h1>
+      <p class="lead light">Quick answers, ways to reach us, and what other customers say.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="two-col">
+      <div class="panel faq">
+        <h2><i class="bi bi-patch-question" aria-hidden="true"></i> Frequently asked questions</h2>
+        <h3><i class="bi bi-cart3" aria-hidden="true"></i> Ordering</h3>
+        <details><summary>How do I place an order?</summary><p>Open the Menu, press “Add to cart” on any dish, then open the cart and press “Proceed to checkout”.</p></details>
+        <details><summary>Can I change my order after placing it?</summary><p>Yes, while the order is “Received” or “Preparing” you can cancel it from the Track Order page and order again, or call us.</p></details>
+        <h3><i class="bi bi-bicycle" aria-hidden="true"></i> Delivery</h3>
+        <details><summary>How long does delivery take?</summary><p>Usually 30–40 minutes. The Track Order page shows a live estimate.</p></details>
+        <details><summary>How much is delivery?</summary><p>Rs 150 per order, and free for orders over Rs 2,000.</p></details>
+        <h3><i class="bi bi-credit-card" aria-hidden="true"></i> Payment</h3>
+        <details><summary>Which payment methods do you accept?</summary><p>Cash on delivery, and Visa or Mastercard debit/credit cards.</p></details>
+        <details><summary>Is my card information safe?</summary><p>Card payments are processed securely and we never store your full card number.</p></details>
+      </div>
+
+      <div>
+        <div class="panel">
+          <h2><i class="bi bi-shop" aria-hidden="true"></i> Visit or call us</h2>
+          <address class="contact-list">
+            <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Shop 12, Food Street, Gulberg III, Lahore</p>
+            <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> <a href="tel:03001234567">0300-1234567</a></p>
+            <p><i class="bi bi-envelope-fill" aria-hidden="true"></i> <a href="mailto:hello@foodwebsite.pk">hello@foodwebsite.pk</a></p>
+          </address>
+          <a class="btn btn-ghost btn-sm" href="https://maps.google.com/?q=Food+Street+Gulberg+Lahore" target="_blank" rel="noopener"><i class="bi bi-map" aria-hidden="true"></i> Open in Google Maps</a>
+          <h3 class="mt"><i class="bi bi-clock" aria-hidden="true"></i> Opening hours</h3>
+          <table class="hours">
+            <tr><th scope="row">Mon – Thu</th><td>12:00 pm – 11:00 pm</td></tr>
+            <tr><th scope="row">Fri – Sun</th><td>12:00 pm – 1:00 am</td></tr>
+          </table>
+        </div>
+
+        <div class="panel" id="a11yPanel">
+          <h2><i class="bi bi-sliders" aria-hidden="true"></i> Accessibility options</h2>
+          <div class="a11y-row" role="group" aria-label="Text size">
+            <span><i class="bi bi-type" aria-hidden="true"></i> Text size</span>
+            <button type="button" class="size-btn" data-size="" aria-pressed="true">A</button>
+            <button type="button" class="size-btn" data-size="lg" aria-pressed="false">A+</button>
+            <button type="button" class="size-btn" data-size="xl" aria-pressed="false">A++</button>
+          </div>
+          <label class="switch"><input type="checkbox" id="hcToggle"><span class="switch-ui" aria-hidden="true"></span> <i class="bi bi-circle-half" aria-hidden="true"></i> High contrast mode</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col even">
+      <div>
+        <form class="panel" id="contactForm" novalidate>
+          <h2><i class="bi bi-chat-dots" aria-hidden="true"></i> Send us a message</h2>
+          <div class="field">
+            <label for="ctName">Your name</label>
+            <input id="ctName" data-rule="name" autocomplete="name" aria-describedby="ctNameErr">
+            <p class="err" id="ctNameErr" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="ctEmail">Email</label>
+            <input id="ctEmail" type="email" data-rule="email" autocomplete="email" aria-describedby="ctEmailErr">
+            <p class="err" id="ctEmailErr" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="ctTopic">Topic</label>
+            <select id="ctTopic"><option>Question about an order</option><option>Delivery problem</option><option>Payment</option><option>Feedback</option><option>Other</option></select>
+          </div>
+          <div class="field">
+            <label for="ctMsg">Message</label>
+            <textarea id="ctMsg" rows="4" data-rule="message" aria-describedby="ctMsgErr"></textarea>
+            <p class="err" id="ctMsgErr" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-send" aria-hidden="true"></i> Send message</button>
+        </form>
+        <div class="panel success" id="contactDone" tabindex="-1" hidden></div>
+      </div>
+
+      <div class="panel">
+        <h2><i class="bi bi-star-half" aria-hidden="true"></i> Ratings &amp; reviews</h2>
+        <p class="avg" id="avgRating"></p>
+        <ul class="reviews" id="reviewList"></ul>
+        <form id="reviewForm" class="review-form" novalidate>
+          <h3>Write a review</h3>
+          <div class="field">
+            <label for="rvDish">Dish</label>
+            <select id="rvDish"></select>
+          </div>
+          <fieldset class="stars">
+            <legend class="sr-only">Your rating</legend>
+            <input type="radio" id="rv5" name="rv" value="5"><label for="rv5"><span class="sr-only">5 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+            <input type="radio" id="rv4" name="rv" value="4"><label for="rv4"><span class="sr-only">4 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+            <input type="radio" id="rv3" name="rv" value="3"><label for="rv3"><span class="sr-only">3 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+            <input type="radio" id="rv2" name="rv" value="2"><label for="rv2"><span class="sr-only">2 stars</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+            <input type="radio" id="rv1" name="rv" value="1"><label for="rv1"><span class="sr-only">1 star</span><i class="bi bi-star-fill" aria-hidden="true"></i></label>
+          </fieldset>
+          <div class="field">
+            <label for="rvText">Your review</label>
+            <textarea id="rvText" rows="2" placeholder="What did you think?"></textarea>
+          </div>
+          <p class="err" id="rvErr" aria-live="polite"></p>
+          <button type="submit" class="btn btn-ghost"><i class="bi bi-pencil-square" aria-hidden="true"></i> Post review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER (same on every page) ================= -->
+<footer class="site-footer">
+  <div class="footer-wave" aria-hidden="true"></div>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="#home" class="logo logo-light" aria-label="Food Website – go to home page">
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#c2410c"/></linearGradient></defs>
+          <rect class="logo-bg" width="48" height="48" rx="14" fill="url(#logoGrad2)"/>
+          <g class="steam" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round">
+            <path class="s1" d="M18 18c-2-2.5 2-4 0-6.5"/><path class="s2" d="M24 18c-2-2.5 2-4 0-6.5"/><path class="s3" d="M30 18c-2-2.5 2-4 0-6.5"/>
+          </g>
+          <path d="M10 24h28a14 12 0 0 1-28 0z" fill="#fff"/>
+          <path d="M20 40h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-words"><span class="logo-name">Food<b>Website</b></span><span class="logo-tag">Fresh · Fast · Tasty</span></span>
+      </a>
+      <p class="footer-about">Home-style Pakistani food, cooked fresh every day and delivered hot to your door.</p>
+    </div>
+    <div>
+      <h2 class="f-h">Contact</h2>
+      <ul class="f-list">
+        <li><i class="bi bi-geo-alt" aria-hidden="true"></i> Food Street, Gulberg III, Lahore</li>
+        <li><i class="bi bi-telephone" aria-hidden="true"></i> <a href="tel:03001234567">0300-1234567</a></li>
+        <li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:hello@foodwebsite.pk">hello@foodwebsite.pk</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">Opening hours</h2>
+      <ul class="f-list"><li><i class="bi bi-clock" aria-hidden="true"></i> Mon–Thu: 12 pm – 11 pm</li><li><i class="bi bi-clock" aria-hidden="true"></i> Fri–Sun: 12 pm – 1 am</li></ul>
+    </div>
+    <div>
+      <h2 class="f-h">Follow us</h2>
+      <ul class="social">
+        <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+        <li><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+      </ul>
+      <a href="#help" class="footer-a11y"><i class="bi bi-sliders" aria-hidden="true"></i> Accessibility options</a>
+    </div>
+  </div>
+  <p class="copy">© 2026 Food Website · HCI &amp; Computer Graphics Project</p>
+</footer>
+
+<!-- ================= DIALOGS ================= -->
+<dialog id="dishDialog" class="dialog dialog-wide" aria-labelledby="dlgName">
+  <button type="button" class="dlg-close" data-close aria-label="Close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  <div class="detail">
+    <div class="detail-art" id="dlgArt"></div>
+    <div class="detail-info">
+      <p class="detail-cat" id="dlgCat"></p>
+      <h2 id="dlgName"></h2>
+      <p class="rating" id="dlgRating"></p>
+      <p id="dlgDesc"></p>
+      <h3>Ingredients</h3>
+      <ul class="ing" id="dlgIng"></ul>
+      <p><strong><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Allergens:</strong> <span id="dlgAllergens"></span></p>
+      <div class="detail-buy">
+        <div class="qty" role="group" aria-label="Quantity">
+          <button type="button" id="dlgMinus" aria-label="Decrease quantity"><i class="bi bi-dash-lg" aria-hidden="true"></i></button>
+          <output id="dlgQty" aria-live="polite">1</output>
+          <button type="button" id="dlgPlus" aria-label="Increase quantity"><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
+        </div>
+        <button type="button" class="btn btn-primary grow" id="dlgAdd">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="related">
+    <h3>You may also like</h3>
+    <div class="related-list" id="dlgRelated"></div>
+  </div>
+</dialog>
+
+<dialog id="confirmDialog" class="dialog" aria-labelledby="cdH">
+  <h2 id="cdH"><i class="bi bi-bag-check" aria-hidden="true"></i> Place this order?</h2>
+  <div id="cdBody"></div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-ghost" data-close><i class="bi bi-arrow-left" aria-hidden="true"></i> Go back &amp; edit</button>
+    <button type="button" class="btn btn-primary" id="placeOrder"><i class="bi bi-check-lg" aria-hidden="true"></i> Yes, place order</button>
+  </div>
+</dialog>
+
+<dialog id="cancelDialog" class="dialog" aria-labelledby="cxH">
+  <h2 id="cxH"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i> Cancel this order?</h2>
+  <p>Your order will be stopped and you won't be charged. This can't be undone.</p>
+  <div class="form-actions">
+    <button type="button" class="btn btn-ghost" data-close>Keep my order</button>
+    <button type="button" class="btn btn-danger" id="confirmCancel">Yes, cancel order</button>
+  </div>
+</dialog>
+
+<dialog id="forgotDialog" class="dialog" aria-labelledby="fgH">
+  <button type="button" class="dlg-close" data-close aria-label="Close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  <h2 id="fgH"><i class="bi bi-key" aria-hidden="true"></i> Reset your password</h2>
+  <form id="forgotForm" novalidate>
+    <p class="muted">Enter your email and we'll send you a link to set a new password.</p>
+    <div class="field">
+      <label for="fgEmail">Email</label>
+      <input id="fgEmail" type="email" data-rule="email" autocomplete="email" aria-describedby="fgEmailErr">
+      <p class="err" id="fgEmailErr" aria-live="polite"></p>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Send reset link</button>
+  </form>
+  <div id="forgotDone" class="success" hidden></div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button type="button" class="to-top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
